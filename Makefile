@@ -5,11 +5,13 @@ CAPROTO ?= $(HOME)/Repos/caproto
 records.py: reference.dbd
 	python generate.py records reference.dbd records.py
 	yapf -i records.py
+	isort records.py
 	@echo "Done."
 
 menus.py: reference.dbd
 	python generate.py menus reference.dbd menus.py
 	# yapf -i menus.py
+	isort menus.py
 	@echo "Done."
 
 copy: records.py menus.py
