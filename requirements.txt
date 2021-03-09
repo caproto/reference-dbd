@@ -1,2 +1,2 @@
 caproto
-yapf
+black
